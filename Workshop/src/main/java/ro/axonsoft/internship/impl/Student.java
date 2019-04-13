@@ -4,34 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
-    private String lastName;
-    private String firstName;
+    private String name;
     private String startTime;
     private String endTime;
     private List<String> disciplineList= new ArrayList<String>();
 
-    public Student(String lastName, String firstName, String startTime, String endTime, List<String> disciplineList) {
-        this.lastName = lastName;
-        this.firstName = firstName;
+    public Student(String name, String startTime, String endTime, List<String> disciplineList) {
+        this.name = name;
         this.startTime = startTime;
         this.endTime = endTime;
         this.disciplineList = disciplineList;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getName() {
+        return name;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getStartTime() {
