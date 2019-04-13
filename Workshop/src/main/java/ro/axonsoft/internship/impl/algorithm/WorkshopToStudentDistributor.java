@@ -15,7 +15,7 @@ public class WorkshopToStudentDistributor {
      * @param workshopList is the list of all read workshops
      * @return a map of lists of workshops sorted by discipline
      */
-    public Map<String, List<WorkshopDescriptor>> sortWorkshopsByDiscopline(@org.jetbrains.annotations.NotNull List<WorkshopDescriptor> workshopList){
+    public Map<String, List<WorkshopDescriptor>> sortWorkshopsByDiscipline(@org.jetbrains.annotations.NotNull List<WorkshopDescriptor> workshopList){
 
         Map<String, List<WorkshopDescriptor>> workshopMap = new HashMap<String, List<WorkshopDescriptor>>();
         Iterator<WorkshopDescriptor> iteratorWorkshopList = workshopList.iterator();
