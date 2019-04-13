@@ -1,4 +1,4 @@
-package ro.axonsoft.internship.impl;
+package ro.axonsoft.internship.impl.entity;
 
 import ro.axonsoft.internship.api.WorkshopDescriptor;
 

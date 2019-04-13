@@ -2,7 +2,7 @@ package ro.axonsoft.internship.impl.reader;
 
 import ro.axonsoft.internship.api.Reader;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
-import ro.axonsoft.internship.impl.Workshop;
+import ro.axonsoft.internship.impl.entity.Workshop;
 
 import java.util.ArrayList;
 import java.util.List;

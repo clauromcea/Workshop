@@ -2,7 +2,7 @@ package ro.axonsoft.internship.impl.reader;
 
 import ro.axonsoft.internship.api.Reader;
 import ro.axonsoft.internship.api.StudentDescriptor;
-import ro.axonsoft.internship.impl.Student;
+import ro.axonsoft.internship.impl.entity.Student;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,8 +39,7 @@ public class StudentReader implements Reader<StudentDescriptor> {
         disciplineList.add("lectura");
         disciplineList.add("muzica");
         disciplineList.add("natura");
-        studentList.add(new Student("Mihai Rusu", "08:30", "15:30", disciplineList) {
-        });
+        studentList.add(new Student("Mihai Rusu", "08:30", "15:30", disciplineList));
 
         disciplineList = new ArrayList<String>();
         disciplineList.add("all");
