@@ -60,4 +60,13 @@ public class Workshop implements WorkshopDescriptor {
     public void setDuration(Integer duration) {
         this.duration = duration;
     }
+
+    @Override
+    public String toString() {
+        return  name + ", " +
+                discipline + ", " +
+                "room: " + room + ", " +
+                time + ", " +
+                duration + " min";
+    }
 }

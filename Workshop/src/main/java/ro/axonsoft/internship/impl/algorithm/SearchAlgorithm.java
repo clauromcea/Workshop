@@ -4,7 +4,7 @@ import ro.axonsoft.internship.api.SearchResult;
 import ro.axonsoft.internship.api.StudentDescriptor;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
 import ro.axonsoft.internship.api.WorkshopFinder;
-import ro.axonsoft.internship.impl.entity.Workshop;
+import ro.axonsoft.internship.impl.entity.Result;
 
 import java.util.*;
 
@@ -25,7 +25,7 @@ public class SearchAlgorithm implements WorkshopFinder {
 
         List<WorkshopDescriptor> workshopListResult = new ArrayList<WorkshopDescriptor>();
 
-        
+
 
         return new Result(studentDescriptor.getName(), workshopListResult);
     }

@@ -7,14 +7,13 @@ import ro.axonsoft.internship.impl.entity.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentReader implements Reader<StudentDescriptor> {
-
+public class StudentReader implements Reader<StudentDescriptor>{
 
     public List<StudentDescriptor> readFile(String filename) {
         return null;
     }
 
-    public Student readLine(String line)  {
+    public StudentDescriptor readLine(String line) {
         return null;
     }
 

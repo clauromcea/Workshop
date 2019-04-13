@@ -1,6 +1,9 @@
 package ro.axonsoft.internship.impl.algorithm;
 
+import ro.axonsoft.internship.api.SearchResult;
+import ro.axonsoft.internship.api.StudentDescriptor;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
+import ro.axonsoft.internship.api.Writer;
 import ro.axonsoft.internship.impl.entity.Workshop;
 
 import java.util.*;
