@@ -1,9 +1,12 @@
 package ro.axonsoft.internship.impl;
 
+import ro.axonsoft.internship.api.StudentDescriptor;
+import ro.axonsoft.internship.api.WorkshopDescriptor;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Student {
+public class Student implements StudentDescriptor {
     private String name;
     private String startTime;
     private String endTime;

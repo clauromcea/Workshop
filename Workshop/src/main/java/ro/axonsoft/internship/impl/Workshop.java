@@ -1,12 +1,17 @@
 package ro.axonsoft.internship.impl;
 
-public class Workshop {
+import ro.axonsoft.internship.api.WorkshopDescriptor;
+
+public class Workshop implements WorkshopDescriptor {
 
     private String name;
     private String discipline;
     private Integer room;
     private String time;
     private Integer duration;
+
+    public Workshop() {
+    }
 
     public Workshop(String name, String discipline, Integer room, String time, Integer duration) {
         this.name = name;

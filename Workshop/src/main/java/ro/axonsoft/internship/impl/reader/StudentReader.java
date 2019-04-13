@@ -1,15 +1,16 @@
 package ro.axonsoft.internship.impl.reader;
 
 import ro.axonsoft.internship.api.Reader;
+import ro.axonsoft.internship.api.StudentDescriptor;
 import ro.axonsoft.internship.impl.Student;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentReader implements Reader<Student> {
+public class StudentReader implements Reader<StudentDescriptor> {
 
 
-    public List<Student> readFile(String filename) {
+    public List<StudentDescriptor> readFile(String filename) {
         return null;
     }
 
@@ -17,8 +18,8 @@ public class StudentReader implements Reader<Student> {
         return null;
     }
 
-    public List<Student> loadStudents(){
-        List<Student> studentList = new ArrayList<Student>();
+    public List<StudentDescriptor> loadStudents(){
+        List<StudentDescriptor> studentList = new ArrayList<StudentDescriptor>();
         List<String> disciplineList;
 
         disciplineList = new ArrayList<String>();
@@ -38,7 +39,8 @@ public class StudentReader implements Reader<Student> {
         disciplineList.add("lectura");
         disciplineList.add("muzica");
         disciplineList.add("natura");
-        studentList.add(new Student("Mihai Rusu", "08:30", "15:30", disciplineList));
+        studentList.add(new Student("Mihai Rusu", "08:30", "15:30", disciplineList) {
+        });
 
         disciplineList = new ArrayList<String>();
         disciplineList.add("all");
