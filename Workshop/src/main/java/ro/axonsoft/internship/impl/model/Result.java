@@ -34,6 +34,7 @@ public class Result implements SearchResult {
         String string = getStudentName();
         Iterator<WorkshopDescriptor> iterator = workshops.iterator();
 
+
         while(iterator.hasNext()){
             string = string + "\n" + iterator.next().toString();
         }

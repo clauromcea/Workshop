@@ -22,13 +22,15 @@ public class SearchAlgorithm implements WorkshopFinder {
      */
     public SearchResult getWorkshops(StudentDescriptor studentDescriptor) {
         List<WorkshopDescriptor> matchingWorkshops = new ArrayList<WorkshopDescriptor>();
-        List<WorkshopDescriptor> maximalWorkshopsSet = new ArrayList<WorkshopDescriptor>();
+        //List<WorkshopDescriptor> maximalWorkshopsSet = new ArrayList<WorkshopDescriptor>();
+        List<List<WorkshopDescriptor>> maximalWorkshopsSetList;
 
         matchingWorkshops = getMatchingWorkshops(studentDescriptor, this.workshopsMap);
         Collections.sort(matchingWorkshops);
-        maximalWorkshopsSet = getMaximalSet(matchingWorkshops);
+        //maximalWorkshopsSet = getMaximalSet(matchingWorkshops);
+        maximalWorkshopsSetList = getMaximalSet(matchingWorkshops);
 
-        return new Result(studentDescriptor.getName(), maximalWorkshopsSet);
+        return new Result(studentDescriptor.getName(), maximalWorkshopsSetList.get(0));
     }
 
     /**
@@ -90,12 +92,13 @@ public class SearchAlgorithm implements WorkshopFinder {
      * @param matchingWorkshops
      * @return the maximal set of workshops that a student can attend
      */
-    private List<WorkshopDescriptor> getMaximalSet(List<WorkshopDescriptor> matchingWorkshops){
+    private List<List<WorkshopDescriptor>> getMaximalSet(List<WorkshopDescriptor> matchingWorkshops){
         int length = matchingWorkshops.size();
-        //List<List<WorkshopDescriptor>> listOfMaximalSets = new ArrayList<List<WorkshopDescriptor>>(length);
-        List<WorkshopDescriptor>[] listOfMaximalSets = new List[length];
+        List<List<WorkshopDescriptor>> maximalSetsList = new ArrayList<List<WorkshopDescriptor>>();
+        List<WorkshopDescriptor>[] maximalSetsArray = new List[length];
         int window;//Time that students need to change rooms
         int maxim;
+        int numberOfWorkshops;
         Iterator<List<WorkshopDescriptor>> iterator;
         List<WorkshopDescriptor> maximalSet = new ArrayList<WorkshopDescriptor>();
         List<WorkshopDescriptor> workshopsSet;
@@ -110,15 +113,16 @@ public class SearchAlgorithm implements WorkshopFinder {
         }
         */
 
-        listOfMaximalSets[length-1] = new ArrayList<WorkshopDescriptor>();
-        listOfMaximalSets[length-1].add(matchingWorkshops.get(length-1));
+        maximalSetsArray[length-1] = new ArrayList<WorkshopDescriptor>();
+        maximalSetsArray[length-1].add(matchingWorkshops.get(length-1));
 
         for (int i = 0; i < length-1; i++){
-            listOfMaximalSets[i] = new ArrayList<WorkshopDescriptor>();
+            maximalSetsArray[i] = new ArrayList<WorkshopDescriptor>();
         }
 
+        maxim = 0;
         for (int i = length-2; i>= 0; i--) {
-            maxim = 0;
+            numberOfWorkshops = 0;
             for (int j = i + 1; j < length; j++) {
                 if (matchingWorkshops.get(j).getRoom().equals(matchingWorkshops.get(i).getRoom())) {
                     window = 0;
@@ -128,13 +132,15 @@ public class SearchAlgorithm implements WorkshopFinder {
 
                 if ((TimeHelper.convertTimeToInteger(matchingWorkshops.get(j).getTime())
                         >= TimeHelper.convertTimeToInteger(matchingWorkshops.get(i).getTime()) + matchingWorkshops.get(i).getDuration() + window)
-                        && (listOfMaximalSets[j].size() > maxim)) {
-                    maxim = listOfMaximalSets[j].size();
+                        && (maximalSetsArray[j].size() > numberOfWorkshops)) {
+                    numberOfWorkshops = maximalSetsArray[j].size();
+
+                    maximalSetsArray[i].addAll(maximalSetsArray[j]);
                 }
             }
-            listOfMaximalSets[i].add(matchingWorkshops.get(i));
+            maximalSetsArray[i].add(matchingWorkshops.get(i));
         }
-        maxim = 0;
+        numberOfWorkshops = 0;
 
         /*
         iterator = listOfMaximalSets.iterator();
@@ -147,11 +153,19 @@ public class SearchAlgorithm implements WorkshopFinder {
         */
 
         for (int i = 0; i < length; i++){
-            if (listOfMaximalSets[i].size() > maxim){
-                maximalSet = listOfMaximalSets[i];
+            if (maximalSetsArray[i].size() > numberOfWorkshops){
+                maximalSet = maximalSetsArray[i];
+                numberOfWorkshops = maximalSetsArray[i].size();
+            }
+            maxim = numberOfWorkshops;
+        }
+
+        for (int i = 0; i < length; i++){
+            if (maximalSetsArray[i].size() == maxim){
+                maximalSetsList.add(maximalSetsArray[i]);
             }
         }
 
-        return maximalSet;
+        return maximalSetsList;
     }
 }
