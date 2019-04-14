@@ -74,6 +74,17 @@ public class Workshop implements WorkshopDescriptor, Comparable<WorkshopDescript
     }
 
     public int compareTo(@NotNull WorkshopDescriptor o) {
-        return TimeHelper.convertTimeToInteger(this.time).compareTo(TimeHelper.convertTimeToInteger(o.getTime()));
+        if (TimeHelper.convertTimeToInteger((this.time)) > TimeHelper.convertTimeToInteger((o.getTime()))){
+            return 1;
+        }else if (TimeHelper.convertTimeToInteger((this.time)) < TimeHelper.convertTimeToInteger((o.getTime()))){
+            return -1;
+        }else if (this.duration > o.getDuration()){
+            return 1;
+        }else if (this.duration < o.getDuration()){
+            return -1;
+        }else{
+            return 0;
+        }
+        //return TimeHelper.convertTimeToInteger(this.time).compareTo(TimeHelper.convertTimeToInteger(o.getTime()));
     }
 }

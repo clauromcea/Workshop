@@ -5,7 +5,6 @@ import ro.axonsoft.internship.api.StudentDescriptor;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
 import ro.axonsoft.internship.api.WorkshopFinder;
 import ro.axonsoft.internship.impl.model.Result;
-import ro.axonsoft.internship.impl.model.Workshop;
 
 import java.util.*;
 
@@ -111,15 +110,16 @@ public class SearchAlgorithm implements WorkshopFinder {
         }
         */
 
+        listOfMaximalSets[length-1] = new ArrayList<WorkshopDescriptor>();
         listOfMaximalSets[length-1].add(matchingWorkshops.get(length-1));
 
-        for (int i = 0; i < length; i++){
+        for (int i = 0; i < length-1; i++){
             listOfMaximalSets[i] = new ArrayList<WorkshopDescriptor>();
         }
 
         for (int i = length-2; i>= 0; i--) {
             maxim = 0;
-            for (int j = i + 1; j < length - 1; j++) {
+            for (int j = i + 1; j < length; j++) {
                 if (matchingWorkshops.get(j).getRoom().equals(matchingWorkshops.get(i).getRoom())) {
                     window = 0;
                 } else {

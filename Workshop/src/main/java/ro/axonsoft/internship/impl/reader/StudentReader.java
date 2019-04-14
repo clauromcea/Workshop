@@ -43,7 +43,7 @@ public class StudentReader implements Reader<StudentDescriptor>{
 
         disciplineList = new ArrayList<String>();
         disciplineList.add("all");
-        studentList.add(new Student("Ioana Artean", new TimeInfo(12, 55), new TimeInfo(15, 30), disciplineList));
+        studentList.add(new Student("Ioana Artean", new TimeInfo(12, 15), new TimeInfo(15, 30), disciplineList));
 
         return studentList;
     }
