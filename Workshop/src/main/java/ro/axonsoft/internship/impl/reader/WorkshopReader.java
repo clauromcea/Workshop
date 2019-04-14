@@ -1,20 +1,36 @@
 package ro.axonsoft.internship.impl.reader;
 
+import ro.axonsoft.internship.api.Convertor;
 import ro.axonsoft.internship.api.Reader;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
+import ro.axonsoft.internship.impl.ReaderException;
 import ro.axonsoft.internship.impl.model.TimeInfo;
 import ro.axonsoft.internship.impl.model.Workshop;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class WorkshopReader implements Reader<WorkshopDescriptor> {
+    private Convertor<Workshop, String> convertor;
 
-    public List<WorkshopDescriptor> readFile(String filename) {
-        return null;
+    public WorkshopReader(Convertor<Workshop, String> convertor) {
+        this.convertor = convertor;
     }
 
-    public Workshop readLine(String line) {
+    public List<WorkshopDescriptor> readFile(String filename) {
+        List<WorkshopDescriptor> result = new ArrayList<WorkshopDescriptor>();
+        Stream<String> lines = RowReader.readRowData(filename, getClass());
+        lines.forEach((String string) -> {
+            result.add(convertor.convert(string));
+        });
+
+        lines.close();
+
+        return result;
+    }
+
+    public Workshop readLine(String line) throws ReaderException {
         return null;
     }
 

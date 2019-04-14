@@ -1,5 +1,7 @@
 package ro.axonsoft.internship.api;
 
+import ro.axonsoft.internship.impl.ReaderException;
+
 import java.util.List;
 
 public interface Reader<Descriptor> {
@@ -14,6 +16,5 @@ public interface Reader<Descriptor> {
      * @param line the line to read
      * @return a description
      */
-    Descriptor readLine(final String line);
-
+    Descriptor readLine(final String line) throws ReaderException;
 }

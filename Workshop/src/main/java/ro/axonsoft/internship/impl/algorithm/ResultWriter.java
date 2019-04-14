@@ -4,6 +4,7 @@ import ro.axonsoft.internship.api.SearchResult;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
 import ro.axonsoft.internship.api.Writer;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Iterator;
@@ -22,6 +23,10 @@ public class ResultWriter implements Writer {
             while (iteratorResults.hasNext()) {
                 result = iteratorResults.next();
 
+                File resultsDir = new File("/Results");
+                if(!resultsDir.exists()){
+                    resultsDir.mkdir();
+                }
                 fileWriter = new FileWriter("Results/"+result.getStudentName() + ".txt");
 
                 writeWorkshopOnLine(fileWriter, result);

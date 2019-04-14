@@ -14,7 +14,6 @@ public class SearchAlgorithm implements WorkshopFinder {
     public SearchAlgorithm(Map<String, List<WorkshopDescriptor>> workshopsMap) {
         this.workshopsMap = workshopsMap;
     }
-
     /**
      * Search the maximum set of workshops the student can attend
      * @param studentDescriptor the description of the student
@@ -32,7 +31,6 @@ public class SearchAlgorithm implements WorkshopFinder {
 
         return new Result(studentDescriptor.getName(), maximalWorkshopsSetList.get(0));
     }
-
     /**
      * Get all the workshops that match the students' attended disciplines
      * and that take place in the sudent availability interval
@@ -86,7 +84,6 @@ public class SearchAlgorithm implements WorkshopFinder {
 
         return matchingWorkshops;
     }
-
     /**
      *
      * @param matchingWorkshops

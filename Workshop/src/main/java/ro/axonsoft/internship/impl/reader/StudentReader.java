@@ -1,20 +1,36 @@
 package ro.axonsoft.internship.impl.reader;
 
+import ro.axonsoft.internship.api.Convertor;
 import ro.axonsoft.internship.api.Reader;
 import ro.axonsoft.internship.api.StudentDescriptor;
+import ro.axonsoft.internship.impl.ReaderException;
 import ro.axonsoft.internship.impl.model.Student;
 import ro.axonsoft.internship.impl.model.TimeInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class StudentReader implements Reader<StudentDescriptor>{
+    private Convertor<Student, String> convertor;
 
-    public List<StudentDescriptor> readFile(String filename) {
-        return null;
+    public StudentReader(Convertor<Student, String> convertor) {
+        this.convertor = convertor;
     }
 
-    public StudentDescriptor readLine(String line) {
+    public List<StudentDescriptor> readFile(String filename) {
+        List<StudentDescriptor> result = new ArrayList<StudentDescriptor>();
+        Stream<String> lines = RowReader.readRowData(filename, getClass());
+        lines.forEach((String string) -> {
+            result.add(convertor.convert(string));
+        });
+
+        lines.close();
+
+        return result;
+    }
+
+    public StudentDescriptor readLine(String line) throws ReaderException {
         return null;
     }
 
