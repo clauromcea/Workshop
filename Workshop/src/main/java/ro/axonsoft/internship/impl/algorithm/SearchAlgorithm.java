@@ -26,7 +26,7 @@ public class SearchAlgorithm implements WorkshopFinder {
         List<WorkshopDescriptor> maximalWorkshopsSet = new ArrayList<WorkshopDescriptor>();
 
         matchingWorkshops = getMatchingWorkshops(studentDescriptor, this.workshopsMap);
-
+        Collections.sort(matchingWorkshops);
         maximalWorkshopsSet = getMaximalSet(matchingWorkshops);
 
         return new Result(studentDescriptor.getName(), maximalWorkshopsSet);
@@ -48,6 +48,9 @@ public class SearchAlgorithm implements WorkshopFinder {
             String discipline;
             WorkshopDescriptor workshop;
 
+            /**
+             *
+             */
             while(iteratorDiscipline.hasNext()){
                 discipline = iteratorDiscipline.next();
                 if("all".equals(discipline)) {
@@ -83,7 +86,11 @@ public class SearchAlgorithm implements WorkshopFinder {
         return matchingWorkshops;
     }
 
-
+    /**
+     *
+     * @param matchingWorkshops
+     * @return the maximal set of workshops that a student can attend
+     */
     private List<WorkshopDescriptor> getMaximalSet(List<WorkshopDescriptor> matchingWorkshops){
         int length = matchingWorkshops.size();
         //List<List<WorkshopDescriptor>> listOfMaximalSets = new ArrayList<List<WorkshopDescriptor>>(length);

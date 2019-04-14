@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0f34942-a3f7-40d6-8b84-a5290acf5ab7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/java/util/annotations.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/ListToMapConverter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/ResultWriter.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/SearchAlgorithm.java" afterDir="false" />
@@ -36,21 +37,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/SearchAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="27" column="87" lean-forward="true" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
+            <state relative-caret-position="-504">
+              <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#525#526#0" expanded="true" />
                 <element signature="e#571#572#0" expanded="true" />
-                <element signature="e#910#930#0" expanded="true" />
+                <element signature="e#975#995#0" expanded="true" />
                 <element signature="e#1067#1087#0" expanded="true" />
-                <element signature="method#getMatchingWorkshops#0;class#SearchAlgorithm#0" />
-                <element signature="e#1345#1365#0" expanded="true" />
-                <element signature="method#getMaximalSet#0;class#SearchAlgorithm#0" />
-                <element signature="e#4377#4397#0" expanded="true" />
+                <element signature="e#1960#1980#0" expanded="true" />
+                <element signature="e#4739#4759#0" expanded="true" />
+                <element signature="e#4489#4777#0" />
+                <element signature="e#5779#6012#0" />
               </folding>
             </state>
           </provider>
@@ -73,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/TimeInfo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
+              <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
               <folding>
                 <element signature="e#140#141#0" expanded="true" />
                 <element signature="e#167#168#0" expanded="true" />
@@ -83,8 +84,6 @@
                 <element signature="e#295#296#0" expanded="true" />
                 <element signature="e#336#337#0" expanded="true" />
                 <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,17 +116,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/api/WorkshopDescriptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="68">
+              <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/WorkshopReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
+            <state relative-caret-position="269">
+              <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#376#377#0" expanded="true" />
@@ -140,26 +142,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/StudentReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#371#372#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#452#453#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/Workshop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="69" column="35" lean-forward="true" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+            <state relative-caret-position="-714">
+              <caret line="6" column="82" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#744#745#0" expanded="true" />
@@ -168,6 +154,18 @@
                 <element signature="e#1063#1064#0" expanded="true" />
                 <element signature="e#1103#1104#0" expanded="true" />
                 <element signature="e#1135#1136#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/StudentReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="45" column="89" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,25 +208,25 @@
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/api/WorkshopFinder.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/Distriburor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/StudentReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/entity/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/ResultWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/WorkshopToStudentDistributor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/main/Launcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/WorkshopReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/entity/Workshop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/TimeInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/TimeHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/Student.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/api/StudentDescriptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/api/WorkshopDescriptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/ListToMapConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/Workshop.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/api/WorkshopDescriptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/SearchAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/TimeInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/StudentReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/WorkshopReader.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -521,53 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/StudentReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#371#372#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#452#453#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/WorkshopReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="23" column="78" selection-start-line="23" selection-start-column="78" selection-end-line="23" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#403#404#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#475#476#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/TimeInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-          <folding>
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#561#562#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/TimeHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -599,13 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/api/WorkshopDescriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/ListToMapConverter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -623,10 +567,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/java/util/annotations.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/Workshop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="69" column="35" lean-forward="true" selection-start-line="69" selection-start-column="35" selection-end-line="69" selection-end-column="35" />
+        <state relative-caret-position="-714">
+          <caret line="6" column="82" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#744#745#0" expanded="true" />
@@ -639,20 +586,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/api/WorkshopDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="73" selection-start-line="6" selection-start-column="73" selection-end-line="6" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/algorithm/SearchAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="27" column="87" lean-forward="true" selection-start-line="27" selection-start-column="87" selection-end-line="27" selection-end-column="87" />
+        <state relative-caret-position="-504">
+          <caret line="51" column="14" lean-forward="true" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#525#526#0" expanded="true" />
             <element signature="e#571#572#0" expanded="true" />
-            <element signature="e#910#930#0" expanded="true" />
+            <element signature="e#975#995#0" expanded="true" />
             <element signature="e#1067#1087#0" expanded="true" />
-            <element signature="method#getMatchingWorkshops#0;class#SearchAlgorithm#0" />
-            <element signature="e#1345#1365#0" expanded="true" />
-            <element signature="method#getMaximalSet#0;class#SearchAlgorithm#0" />
-            <element signature="e#4377#4397#0" expanded="true" />
+            <element signature="e#1960#1980#0" expanded="true" />
+            <element signature="e#4739#4759#0" expanded="true" />
+            <element signature="e#4489#4777#0" />
+            <element signature="e#5779#6012#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/model/TimeInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="35" column="39" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+          <folding>
+            <element signature="e#140#141#0" expanded="true" />
+            <element signature="e#167#168#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/StudentReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="45" column="89" selection-start-line="45" selection-start-column="89" selection-end-line="45" selection-end-column="89" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ro/axonsoft/internship/impl/reader/WorkshopReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
           </folding>
         </state>
       </provider>

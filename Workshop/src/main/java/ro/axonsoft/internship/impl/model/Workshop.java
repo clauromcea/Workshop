@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
 import ro.axonsoft.internship.impl.algorithm.TimeHelper;
 
-public class Workshop implements WorkshopDescriptor, Comparable<Workshop> {
+public class Workshop implements WorkshopDescriptor, Comparable<WorkshopDescriptor> {
 
     private String name;
     private String discipline;
@@ -73,7 +73,7 @@ public class Workshop implements WorkshopDescriptor, Comparable<Workshop> {
                 duration + " min";
     }
 
-    public int compareTo(@NotNull Workshop o) {
+    public int compareTo(@NotNull WorkshopDescriptor o) {
         return TimeHelper.convertTimeToInteger(this.time).compareTo(TimeHelper.convertTimeToInteger(o.getTime()));
     }
 }

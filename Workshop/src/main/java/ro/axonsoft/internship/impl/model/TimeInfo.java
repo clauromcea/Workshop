@@ -27,6 +27,14 @@ public class TimeInfo {
 
     @Override
     public String toString() {
-        return this.hour + ":" + this.minute;
+        String hour = "" + this.hour;
+        String minute = "" + this.minute;
+        if (this.hour < 10){
+            hour = "0" + this.hour;
+        }
+        if (this.minute < 10){
+            minute = "0" + this.minute;
+        }
+        return hour + ":" + minute;
     }
 }

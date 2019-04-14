@@ -2,7 +2,9 @@ package ro.axonsoft.internship.api;
 
 import ro.axonsoft.internship.impl.model.TimeInfo;
 
-public interface WorkshopDescriptor{
+import java.util.Collections;
+
+public interface WorkshopDescriptor extends Comparable<WorkshopDescriptor> {
 
     public String getName();
 
