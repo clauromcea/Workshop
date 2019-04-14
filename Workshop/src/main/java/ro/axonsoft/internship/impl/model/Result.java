@@ -1,4 +1,4 @@
-package ro.axonsoft.internship.impl.entity;
+package ro.axonsoft.internship.impl.model;
 
 import ro.axonsoft.internship.api.SearchResult;
 import ro.axonsoft.internship.api.WorkshopDescriptor;

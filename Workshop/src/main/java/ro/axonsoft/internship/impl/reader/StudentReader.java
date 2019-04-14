@@ -2,7 +2,7 @@ package ro.axonsoft.internship.impl.reader;
 
 import ro.axonsoft.internship.api.Reader;
 import ro.axonsoft.internship.api.StudentDescriptor;
-import ro.axonsoft.internship.impl.entity.Student;
+import ro.axonsoft.internship.impl.model.Student;
 
 import java.util.ArrayList;
 import java.util.List;

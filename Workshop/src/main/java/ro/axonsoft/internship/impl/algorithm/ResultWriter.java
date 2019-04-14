@@ -22,7 +22,7 @@ public class ResultWriter implements Writer {
             while (iteratorResults.hasNext()) {
                 result = iteratorResults.next();
 
-                fileWriter = new FileWriter("C:/Users/romce/Desktop/Results/"+result.getStudentName() + ".txt");
+                fileWriter = new FileWriter("Results/"+result.getStudentName() + ".txt");
 
                 writeWorkshopOnLine(fileWriter, result);
                 fileWriter.close();

@@ -1,18 +1,17 @@
-package ro.axonsoft.internship.impl.entity;
+package ro.axonsoft.internship.impl.model;
 
 import ro.axonsoft.internship.api.StudentDescriptor;
-import ro.axonsoft.internship.api.WorkshopDescriptor;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Student implements StudentDescriptor {
     private String name;
-    private String startTime;
-    private String endTime;
+    private TimeInfo startTime;
+    private TimeInfo endTime;
     private List<String> disciplineList= new ArrayList<String>();
 
-    public Student(String name, String startTime, String endTime, List<String> disciplineList) {
+    public Student(String name, TimeInfo startTime, TimeInfo endTime, List<String> disciplineList) {
         this.name = name;
         this.startTime = startTime;
         this.endTime = endTime;
@@ -27,19 +26,19 @@ public class Student implements StudentDescriptor {
         this.name = name;
     }
 
-    public String getStartTime() {
+    public TimeInfo getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(String startTime) {
+    public void setStartTime(TimeInfo startTime) {
         this.startTime = startTime;
     }
 
-    public String getEndTime() {
+    public TimeInfo getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(String endTime) {
+    public void setEndTime(TimeInfo endTime) {
         this.endTime = endTime;
     }
 

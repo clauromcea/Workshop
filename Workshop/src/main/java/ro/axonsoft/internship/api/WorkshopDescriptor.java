@@ -1,5 +1,7 @@
 package ro.axonsoft.internship.api;
 
+import ro.axonsoft.internship.impl.model.TimeInfo;
+
 public interface WorkshopDescriptor{
 
     public String getName();
@@ -14,9 +16,9 @@ public interface WorkshopDescriptor{
 
     public void setRoom(Integer room);
 
-    public String getTime();
+    public TimeInfo getTime();
 
-    public void setTime(String time);
+    public void setTime(TimeInfo time);
 
     public Integer getDuration();
 

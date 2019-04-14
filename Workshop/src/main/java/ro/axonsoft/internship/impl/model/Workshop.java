@@ -1,19 +1,22 @@
-package ro.axonsoft.internship.impl.entity;
+package ro.axonsoft.internship.impl.model;
 
+import org.jetbrains.annotations.NotNull;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
+import ro.axonsoft.internship.impl.algorithm.TimeHelper;
 
-public class Workshop implements WorkshopDescriptor {
+public class Workshop implements WorkshopDescriptor, Comparable<Workshop> {
 
     private String name;
     private String discipline;
     private Integer room;
-    private String time;
+    private TimeInfo time;
     private Integer duration;
+
 
     public Workshop() {
     }
 
-    public Workshop(String name, String discipline, Integer room, String time, Integer duration) {
+    public Workshop(String name, String discipline, Integer room, TimeInfo time, Integer duration) {
         this.name = name;
         this.discipline = discipline;
         this.room = room;
@@ -45,11 +48,11 @@ public class Workshop implements WorkshopDescriptor {
         this.room = room;
     }
 
-    public String getTime() {
+    public TimeInfo getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(TimeInfo time) {
         this.time = time;
     }
 
@@ -65,8 +68,12 @@ public class Workshop implements WorkshopDescriptor {
     public String toString() {
         return  name + ", " +
                 discipline + ", " +
-                "room: " + room + ", " +
+                "room:" + room + ", " +
                 time + ", " +
                 duration + " min";
+    }
+
+    public int compareTo(@NotNull Workshop o) {
+        return TimeHelper.convertTimeToInteger(this.time).compareTo(TimeHelper.convertTimeToInteger(o.getTime()));
     }
 }

@@ -2,12 +2,13 @@ package ro.axonsoft.internship.impl.reader;
 
 import ro.axonsoft.internship.api.Reader;
 import ro.axonsoft.internship.api.WorkshopDescriptor;
-import ro.axonsoft.internship.impl.entity.Workshop;
+import ro.axonsoft.internship.impl.model.Workshop;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class WorkshopReader implements Reader<WorkshopDescriptor> {
+
     public List<WorkshopDescriptor> readFile(String filename) {
         return null;
     }
@@ -20,7 +21,7 @@ public class WorkshopReader implements Reader<WorkshopDescriptor> {
         List<WorkshopDescriptor> workshopList = new ArrayList<WorkshopDescriptor>();
 
         workshopList.add(new Workshop("Instrumente neconventionale", "muzica", 12, "13:00", 90));
-        workshopList.add(new Workshop("Povesti creative", "literatura", 25, "8:30", 50));
+        workshopList.add(new Workshop("Povesti creative", "literatura", 25, "08:30", 50));
         workshopList.add(new Workshop("Pictura pe sticla", "pictura", 4, "10:15", 40));
         workshopList.add(new Workshop("Plantarea semintelor de flori", "natura", 26, "15:00", 45));
         workshopList.add(new Workshop("pictura pe ceramica", "pictura", 25, "14:00", 30));

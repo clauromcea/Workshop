@@ -1,5 +1,7 @@
 package ro.axonsoft.internship.api;
 
+import ro.axonsoft.internship.impl.model.TimeInfo;
+
 import java.util.List;
 
 public interface StudentDescriptor {
@@ -8,13 +10,13 @@ public interface StudentDescriptor {
 
     public void setName(String name);
 
-    public String getStartTime();
+    public TimeInfo getStartTime();
 
-    public void setStartTime(String startTime);
+    public void setStartTime(TimeInfo startTime);
 
-    public String getEndTime();
+    public TimeInfo getEndTime();
 
-    public void setEndTime(String endTime);
+    public void setEndTime(TimeInfo endTime);
 
     public List<String> getDisciplineList();
 
