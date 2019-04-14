@@ -1,16 +1,16 @@
 package ro.axonsoft.internship.impl.convertor;
 
-import ro.axonsoft.internship.api.Convertor;
+import ro.axonsoft.internship.api.Converter;
 import ro.axonsoft.internship.impl.model.Student;
 import ro.axonsoft.internship.impl.model.TimeInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentConvertor implements Convertor<Student, String> {
-    private TimeConvertor timeConverter;
+public class StudentConverter implements Converter<Student, String> {
+    private TimeConverter timeConverter;
 
-    public StudentConvertor(TimeConvertor timeConverter) {
+    public StudentConverter(TimeConverter timeConverter) {
         this.timeConverter = timeConverter;
     }
 

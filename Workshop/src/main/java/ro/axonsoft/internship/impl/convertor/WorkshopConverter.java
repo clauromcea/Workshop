@@ -1,14 +1,13 @@
 package ro.axonsoft.internship.impl.convertor;
 
-import ro.axonsoft.internship.api.Convertor;
-import ro.axonsoft.internship.impl.convertor.TimeConvertor;
+import ro.axonsoft.internship.api.Converter;
 import ro.axonsoft.internship.impl.model.TimeInfo;
 import ro.axonsoft.internship.impl.model.Workshop;
 
-public class WorkshopConvertor implements Convertor<Workshop, String> {
-    public TimeConvertor timeConvertor;
+public class WorkshopConverter implements Converter<Workshop, String> {
+    public TimeConverter timeConvertor;
 
-    public WorkshopConvertor(TimeConvertor timeConvertor) {
+    public WorkshopConverter(TimeConverter timeConvertor) {
         this.timeConvertor = timeConvertor;
     }
 

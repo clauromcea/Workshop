@@ -39,7 +39,7 @@ public class SearchAlgorithm implements WorkshopFinder {
      * @return a list of workshops that match whit the discipline and time interval of student availability
      */
     private List<WorkshopDescriptor> getMatchingWorkshops(StudentDescriptor studentDescriptor, Map<String , List<WorkshopDescriptor>> workshopsMap){
-        List<WorkshopDescriptor> matchingWorkshops = new ArrayList<WorkshopDescriptor>();
+        List<WorkshopDescriptor> matchingWorkshops = new ArrayList<>();
 
         for(Map.Entry<String, List<WorkshopDescriptor>> entry: workshopsMap.entrySet()){
             Iterator<String> iteratorDiscipline = studentDescriptor.getDisciplineList().iterator();
@@ -63,7 +63,6 @@ public class SearchAlgorithm implements WorkshopFinder {
                             matchingWorkshops.add(workshop);
                         }
                     }
-                    //matchingWorkshops.addAll(entry.getValue());
                 }else{
                     if (discipline.equals(entry.getKey())) {
                         iteratorWorkshop = entry.getValue().iterator();
@@ -76,7 +75,6 @@ public class SearchAlgorithm implements WorkshopFinder {
                                 matchingWorkshops.add(workshop);
                             }
                         }
-                        //matchingWorkshops.addAll(entry.getValue());
                     }
                 }
             }
@@ -91,30 +89,20 @@ public class SearchAlgorithm implements WorkshopFinder {
      */
     private List<List<WorkshopDescriptor>> getMaximalSet(List<WorkshopDescriptor> matchingWorkshops){
         int length = matchingWorkshops.size();
-        List<List<WorkshopDescriptor>> maximalSetsList = new ArrayList<List<WorkshopDescriptor>>();
+        List<List<WorkshopDescriptor>> maximalSetsList = new ArrayList<>();
         List<WorkshopDescriptor>[] maximalSetsArray = new List[length];
         int window;//Time that students need to change rooms
         int maxim;
         int numberOfWorkshops;
-        Iterator<List<WorkshopDescriptor>> iterator;
-        List<WorkshopDescriptor> maximalSet = new ArrayList<WorkshopDescriptor>();
+        List<WorkshopDescriptor> maximalSet = new ArrayList<>();
         List<WorkshopDescriptor> workshopsSet;
 
-        /*
-        listOfMaximalSets.get(length-1).add(matchingWorkshops.get(length-1));
 
-        iterator = listOfMaximalSets.iterator();
-        while (iterator.hasNext()) {
-            iterator.next() = new ArrayList<WorkshopDescriptor>();
-            iterator.
-        }
-        */
-
-        maximalSetsArray[length-1] = new ArrayList<WorkshopDescriptor>();
+        maximalSetsArray[length-1] = new ArrayList<>();
         maximalSetsArray[length-1].add(matchingWorkshops.get(length-1));
 
         for (int i = 0; i < length-1; i++){
-            maximalSetsArray[i] = new ArrayList<WorkshopDescriptor>();
+            maximalSetsArray[i] = new ArrayList<>();
         }
 
         maxim = 0;
@@ -138,16 +126,6 @@ public class SearchAlgorithm implements WorkshopFinder {
             maximalSetsArray[i].add(matchingWorkshops.get(i));
         }
         numberOfWorkshops = 0;
-
-        /*
-        iterator = listOfMaximalSets.iterator();
-        if(iterator.hasNext()){
-            workshopsSet = iterator.next();
-            if (workshopsSet.size() > maxim){
-                maximalSet = workshopsSet;
-            }
-        }
-        */
 
         for (int i = 0; i < length; i++){
             if (maximalSetsArray[i].size() > numberOfWorkshops){

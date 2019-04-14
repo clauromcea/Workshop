@@ -11,16 +11,16 @@ public class ListToMapConverter {
      * @param workshopList is the list of all read workshops
      * @return a map of lists of workshops sorted by discipline
      */
-    public static Map<String, List<WorkshopDescriptor>> sortWorkshopsByDiscipline(@org.jetbrains.annotations.NotNull List<WorkshopDescriptor> workshopList){
-        Map<String, List<WorkshopDescriptor>> workshopMap = new HashMap<String, List<WorkshopDescriptor>>();
-        Iterator<WorkshopDescriptor> iteratorWorkshopList = workshopList.iterator();
-        WorkshopDescriptor workshop = new Workshop();
+    public static Map<String, List<WorkshopDescriptor>> sortWorkshopsByDiscipline(@org.jetbrains.annotations.NotNull List<Workshop> workshopList){
+        Map<String, List<WorkshopDescriptor>> workshopMap = new HashMap<>();
+        Iterator<Workshop> iteratorWorkshopList = workshopList.iterator();
+        WorkshopDescriptor workshop;
 
         while(iteratorWorkshopList.hasNext()){
             workshop = iteratorWorkshopList.next();
 
             if(!workshopMap.containsKey(workshop.getDiscipline())){
-                workshopMap.put(workshop.getDiscipline(), new ArrayList<WorkshopDescriptor>());
+                workshopMap.put(workshop.getDiscipline(), new ArrayList<>());
                 workshopMap.get(workshop.getDiscipline()).add(workshop);
             }
             else{

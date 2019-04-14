@@ -1,6 +1,6 @@
 package ro.axonsoft.internship.impl.reader;
 
-import ro.axonsoft.internship.api.Convertor;
+import ro.axonsoft.internship.api.Converter;
 import ro.axonsoft.internship.api.Reader;
 import ro.axonsoft.internship.api.StudentDescriptor;
 import ro.axonsoft.internship.impl.ReaderException;
@@ -11,36 +11,37 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class StudentReader implements Reader<StudentDescriptor>{
-    private Convertor<Student, String> convertor;
+public class StudentReader implements Reader<Student> {
+    private Converter<Student, String> converter;
 
-    public StudentReader(Convertor<Student, String> convertor) {
-        this.convertor = convertor;
+    public StudentReader(Converter<Student, String> converter) {
+        this.converter = converter;
     }
 
-    public List<StudentDescriptor> readFile(String filename) {
-        List<StudentDescriptor> result = new ArrayList<StudentDescriptor>();
-        Stream<String> lines = RowReader.readRowData(filename, getClass());
-        lines.forEach((String string) -> {
-            result.add(convertor.convert(string));
+    @Override
+    public List<Student> readFile(String filename) {
+        List<Student> result = new ArrayList<>();
+        Stream<String> lines = RawReader.readRawData(filename, getClass());
+        lines.forEach((String s) -> {
+            result.add(converter.convert(s));
         });
-
         lines.close();
 
         return result;
     }
 
-    public StudentDescriptor readLine(String line) throws ReaderException {
+    @Override
+    public Student readLine(String line) throws ReaderException {
         return null;
     }
 
-    public List<StudentDescriptor> loadStudents(){
+    public List<StudentDescriptor> loadStudents() {
         List<StudentDescriptor> studentList = new ArrayList<StudentDescriptor>();
         List<String> disciplineList;
 
         disciplineList = new ArrayList<String>();
         disciplineList.add("pictura");
-        studentList.add(new Student("Andrei Popescu", new TimeInfo(10, 30), new TimeInfo(15,00), disciplineList));
+        studentList.add(new Student("Andrei Popescu", new TimeInfo(10, 30), new TimeInfo(15, 00), disciplineList));
 
         disciplineList = new ArrayList<String>();
         disciplineList.add("all");

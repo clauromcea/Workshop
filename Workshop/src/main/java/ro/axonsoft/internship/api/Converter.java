@@ -1,5 +1,5 @@
 package ro.axonsoft.internship.api;
 
-public interface Convertor<T, R> {
+public interface Converter<T, R> {
     T convert(R r);
 }

@@ -7,21 +7,21 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
 
-class RowReader {
+class RawReader {
 
-    static Stream<String> readRowData(String filename, Class clazz){
+    static Stream<String> readRawData(String filename, Class clazz) {
         try {
             Path path = null;
-            try{
-                path = Paths.get(clazz.getClassLoader().getResource(filename).toURI());
+            try {
+                path = Paths.get(clazz.getClassLoader()
+                        .getResource(filename).toURI());
             } catch (URISyntaxException e) {
-                e.printStackTrace();
+                return null;
             }
 
             return Files.lines(path);
         } catch (IOException e) {
-            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 }
